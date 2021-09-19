@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Shopping Cart </title>
+        <meta charset="UTF-8">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.CSS">
+        
+    </head>
+    <body onload="finalprice();">
+        <script src="file.js"></script>
+      <header>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand">SHOP</a>
+              <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>
+      </header>  
+      <main>
+        <div class="items" >
+            <div class='Item' id="Item1" onclick="sum('num1','p1');finalprice();"> 
+                <button onclick=" heart(id)" id="like1" class="like"> <i class="fa fa-heart fa-2x" ></i> </button>
+                <img src="iphone-12-pro-max.jpg" alt="iphone 12">
+                <p class="description"> Apple iphone 12 pro 128Go <br>
+                Pacific Blue
+                </p>
+                <div class="quantity">     
+                    <button onclick=" minus('num1');" class="minus-btn">
+                        <img src="minus-symbol-button.svg" alt="minus sign" />
+                    </button>
+                    <input type="text" id="num1" class="Quant" value=" 1" readonly>
+                    <input type="number" id="itemprice1" value="1379" hidden>
+                    <button onclick=" pluss('num1');" class="plus-btn">
+                        <img src="plus-symbol-button.svg" alt="plus sign" />
+                    </button>
+                </div>
+                <p id="p1" class="price1"> 1379.00 </p>
+                <button onclick=" deletee('Item1','num1')" class="delete"> X </button>
+            </div>
+            <div class="Item" id="Item2"  onclick="sum('num2','p2');finalprice();">
+                <button onclick=" heart(id)" id="like2" class="like"> <i class="fa fa-heart fa-2x"></i> </button>
+                <img src="running shoes.jpg" alt="adidas running shoes">
+                <p class="description"> Adidas U_Path X Shoes <br>
+                    Adidas women's running shoes
+                </p>
+                <div class="quantity">     
+                    <button class="minus-btn"  onclick=" minus('num2');">
+                        <img src="minus-symbol-button.svg" alt="minus sign" />
+                    </button>
+                    <input type="text" id="num2" class="Quant" value=" 1" readonly>
+                    <input type="number" id="itemprice2" value="176.8" hidden>
+                    <button onclick=" pluss('num2');" class="plus-btn">
+                        <img src="plus-symbol-button.svg" alt="plus sign" />
+                    </button>
+                </div>
+                <p id="p2" class="price"> 176.80 </p>
+                <button onclick=" deletee('Item2','num2')" class="delete"> X </button>
+            </div>
+            <div class="Item" id="Item3" onclick="sum('num3','p3');finalprice();">
+                <button onclick=" heart(id)" id="like3"  class="like"> <i class="fa fa-heart fa-2x"></i> </button>
+                <img src="apple-watch.jpg" alt="i-watch">
+                <p class="description"> Apple watch Series 3 </p>
+                <div class="quantity">     
+                    <button class="minus-btn"  onclick=" minus('num3');">
+                        <img src="minus-symbol-button.svg" alt="minus sign" />
+                    </button>
+                    <input type="text" id="num3" class="Quant" value=" 1" readonly>
+                    <input type="number" id="itemprice3" value="249" hidden>
+                    <button onclick=" pluss('num3');" class="plus-btn">
+                        <img src="plus-symbol-button.svg" alt="plus sign" />
+                    </button>
+                </div>
+                <p id="p3" class="price"> 249.00 </p>
+                <button onclick=" deletee('Item3','num3')" class="delete"> X </button>
+
+            </div>
+        </div>
+        <div id="total-price">
+            <p>Total Price: </p>
+            <input type="text" id ="finalPrice" value="" readonly>
+        </div>
+      </main>
+      <footer>
+        © 2021.Hnainia Nissrine.
+      </footer> 
+    </body>
+</html>
